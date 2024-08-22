@@ -31,7 +31,7 @@ const UseEffect_01 = () => {
       <button onClick={addNumber}>Counter</button>
       <button onClick={() => setCount(count + 1)}>Counter : {count}</button>
       <br />
-      <br />ed4
+      <br />
       <input
         type="text"
         value={name}
