@@ -5,14 +5,17 @@ function UseEffect_02() {
   const [y, setY] = useState(0);
 
   const logMousePosition = (e) => {
-    // console.log("Hello Nothing");
     setX(e.clientX);
     setY(e.clientY);
   };
 
   useEffect(() => {
-    // console.log("Hello");
     window.addEventListener("mousemove", logMousePosition);
+
+    return () => {
+      console.log("Component unmount");
+      window.removeEventListener("mousemove", logMousePosition);
+    };
   }, []);
 
   return (
