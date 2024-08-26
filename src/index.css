@@ -1,6 +1,63 @@
 body {
-  
+
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  height: 100vh;
+  width: 20%;
+  text-align: left;
+  position: fixed;
+  right: -100%;
+  transition: .5s;
+  background-color: yellow;
+}
+
+.content ul li {
+  list-style: none;
+  padding: 10px 0px;
+  font-size: 1.5rem;
+}
+
+.activeMenu {
+  right: 0%;
+}
+
+.icon {
+  position: absolute;
+  right: 5px;
+  top: 5%;
+}
+
+.modalOverlay {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: fixed;
+  display: none;
+
+    transition: .6s;
+}
+
+.modalDiv {
+  width: 400px;
+  position: fixed;
+  height: 450px;
+  transition: .6s;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: aliceblue;
+}
+
+.showModal {
+  display: block;
+}
+
+.activeModal {
+  top: 50%;
 }

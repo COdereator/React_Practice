@@ -18,8 +18,8 @@ function App() {
       {/* UseEffect Hook */}
       {/* <UseEffect_01 />
       <UseEffect_02 />
-      <UseEffect_03 /> */}
-      <Class />
+      <UseEffect_03 /> 
+      <Class />*/}
       <Functional />
     </>
   );
