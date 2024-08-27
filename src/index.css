@@ -38,9 +38,9 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   position: fixed;
-  display: none;
-
-    transition: .6s;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
 }
 
 .modalDiv {
@@ -55,9 +55,36 @@ body {
 }
 
 .showModal {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .activeModal {
   top: 50%;
+}
+
+.faqOuter{
+  width: 90%;
+  margin: auto;
+}
+.faqItems{
+  border: 1px solid red;
+}
+.faqItems h1{
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+.faqItems p{
+  text-align: center;
+  height: 0px;
+  transition: .6s;
+  transform: scaleY(0);
+  padding: 10px;
+}
+.activeAns{
+  height: auto !important;
+  transform: scaleY(1) !important;
+  padding: 10px !important;
 }

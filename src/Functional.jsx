@@ -4,6 +4,7 @@ const Functional = () => {
   const [hide, setHide] = useState(true);
   const [pass, setPass] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const [modal, setModal] = useState(false);
   return (
@@ -19,7 +20,9 @@ const Functional = () => {
       </div>
 
       <div className={`modalOverlay ${modal ? "showModal" : ""}`}>
-        <div className={`modalDiv ${modal ? "activeModal" : ""}`}></div>
+        <div className={`modalDiv ${modal ? "activeModal" : ""}`}>
+          <button onClick={() => setModal(false)}>&times;</button>
+        </div>
       </div>
 
       <button onClick={() => setHide(!hide)}>{hide ? "Hide" : "Show"}</button>
@@ -38,6 +41,19 @@ const Functional = () => {
       </button>
 
       <button onClick={() => setModal(!modal)}>Enquiry Now</button>
+
+      <div className="faqOuter">
+        <div className="faqItems">
+          <h1>Heading Tag</h1>
+          <p className={`${toggle ? "activeAns" : ""}`}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            corrupti illum maiores cumque assumenda, laborum iusto sapiente
+            veniam hic, accusamus, illo doloremque harum quasi deleniti
+            repellendus ratione ad. Fuga qu isquam veniam delectus?
+          </p>
+        </div>
+      </div>
+      <button onClick={() => setToggle(!toggle)}>Toggle</button>
     </>
   );
 };
