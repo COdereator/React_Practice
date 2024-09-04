@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
+import { datas } from "./Question";
 const Functional = () => {
   const [hide, setHide] = useState(true);
   const [pass, setPass] = useState(false);
   const [menu, setMenu] = useState(false);
-  const [toggle, setToggle] = useState(true);
+  const [Ans, setAns] = useState(datas[0].id);
 
   const [modal, setModal] = useState(false);
   return (
@@ -42,18 +42,18 @@ const Functional = () => {
 
       <button onClick={() => setModal(!modal)}>Enquiry Now</button>
 
-      <div className="faqOuter">
-        <div className="faqItems">
-          <h1>Heading Tag</h1>
-          <p className={`${toggle ? "activeAns" : ""}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            corrupti illum maiores cumque assumenda, laborum iusto sapiente
-            veniam hic, accusamus, illo doloremque harum quasi deleniti
-            repellendus ratione ad. Fuga qu isquam veniam delectus?
-          </p>
+    {
+      datas.map((data,index)=>
+        <div className="faqOuter" key={index}>
+          <div className="faqItems">
+            <h1 onClick={()=> setAns(data.id)}>{data.question}</h1>
+            <p className={Ans == data.id ? 'activeAns' : ''} >{data.short_answer}</p>
+          </div>
         </div>
-      </div>
-      <button onClick={() => setToggle(!toggle)}>Toggle</button>
+      )
+    }
+
+      
     </>
   );
 };
