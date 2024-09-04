@@ -64,25 +64,33 @@ body {
 }
 
 .faqOuter{
-  width: 90%;
+  width: 90vw;
   margin: auto;
+  cursor: pointer;
 }
+
 .faqItems{
-  border: 1px solid red;
+  border: 1px solid red; 
+  margin: 10px 0px;
 }
+
 .faqItems h1{
+  margin: 0px;
   padding: 10px;
   background-color: black;
   color: white;
   text-align: left;
 }
 .faqItems p{
-  text-align: center;
+  text-align: left;
   height: 0px;
-  transition: .6s;
   transform: scaleY(0);
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+  transition: .6s;
 }
+
+
 .activeAns{
   height: auto !important;
   transform: scaleY(1) !important;
